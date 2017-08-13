@@ -20,8 +20,7 @@ reddit = praw.Reddit(client_id=config.CLIENT_ID,
 
 subreddit = reddit.subreddit(subreddit_name)
 for submission in subreddit.hot(limit=10):
-    print colored(str(submission.score), 'red'), 
-          colored(submission.title,'blue', attrs=['bold'])
+    print colored(str(submission.score), 'red'), colored(submission.title,'blue', attrs=['bold'])
 
     comments = list(submission.comments)
     
@@ -39,11 +38,10 @@ for submission in subreddit.hot(limit=10):
             if len(comments) > 2:
                 details[-1] += 's'
     
-        details = colored(', '.join(details) + '.', attrs=['dark'])
-
         print top_comment 
         if details:
-            print details
+            print colored(', '.join(details) + '.', attrs=['dark'])
+
     else:
         print '<No comments>'
     print ''
