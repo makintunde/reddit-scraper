@@ -1,5 +1,9 @@
 # reddit-scraper
 A quick and dirty Reddit scraper.
 
-# Usage
+## Usage
+```
+python scraper.png <subreddit-name>
+```
+## Example
 ![Scraper](scraper.png?raw=true "Usage")
